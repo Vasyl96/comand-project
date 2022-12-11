@@ -1,0 +1,28 @@
+// Button style
+.btn {
+  padding: 6px 18px;
+  @include font(13px, 500, 20px);
+  color: var(--main-color);
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover-color);
+  }
+
+  &--form {
+    @include font(16px, 700, 25px);
+  }
+
+  &--subscribe {
+    display: block;
+    padding: 11px 22px;
+
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+    }
+  }
+}

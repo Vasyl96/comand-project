@@ -1,0 +1,93 @@
+<div class="modal modal--is-hidden" data-modal>
+  <!-- Кнопка закрытия модального окна -->
+  <button class="close-btn" type="button" data-modal-close>
+    <svg class="close-btn__icon">
+      <use href="./images/svg/icons.svg#close"></use>
+    </svg>
+  </button>
+
+  <!-- Форма модального окна -->
+  <form class="form validateModal">
+    <strong class="form__title">Enter Delivery Address</strong>
+    <div class="form__group" role="group">
+      <label class="form__label">
+        <span class="form__text">Your name</span>
+        <input
+          class="form__input modalName"
+          type="text"
+          name="name"
+          placeholder="Your name"
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          required
+          data-validate
+        />
+        <svg class="form__icon">
+          <use href="./images/svg/icons.svg#pacman"></use>
+        </svg>
+      </label>
+      <label class="form__label">
+        <span class="form__text">Phone number</span>
+        <input
+          class="form__input modalTel"
+          type="tel"
+          name="phone-number"
+          placeholder="+38(0__)-___-__-__"
+          pattern="^\+38\(\d{3}\)-\d{3}-\d{2}-\d{2}$"
+          minlength="12"
+          data-slots="_"
+          required
+          data-validate
+        />
+        <svg class="form__icon">
+          <use href="./images/svg/icons.svg#phone"></use>
+        </svg>
+      </label>
+      <label class="form__label">
+        <span class="form__text">Email</span>
+        <input
+          class="form__input modalMail"
+          type="email"
+          name="email"
+          placeholder="example@email.com"
+          required
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+          data-validate
+        />
+        <svg class="form__icon">
+          <use href="./images/svg/icons.svg#envelope"></use>
+        </svg>
+      </label>
+      <label class="form__label">
+        <span class="form__text">Street Address</span>
+        <input
+          class="form__input modalAddress"
+          type="text"
+          name="address"
+          placeholder="Markup Ave, 123"
+          required
+          data-validate
+          minlength="5"
+        />
+        <svg class="form__icon">
+          <use href="./images/svg/icons.svg#location"></use>
+        </svg>
+      </label>
+      <label class="form__label">
+        <span class="form__text">Your notes</span>
+        <textarea
+          class="form__textarea"
+          name="comment"
+          rows="6"
+          placeholder="Notes for your order"
+        ></textarea>
+      </label>
+    </div>
+    <button
+      class="btn btn--form submitBtn"
+      type="submit"
+      data-tooltip="Please insert bread in your disc drive"
+    >
+      Submit
+    </button>
+  </form>
+</div>

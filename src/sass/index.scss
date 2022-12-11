@@ -1,2 +1,28 @@
-@import './common';
-@import './example';
+// Utils styles
+@import './utils/vars';
+@import './utils/visually-hidden';
+@import './utils/mixin';
+@import './utils/no-scroll';
+
+// Base styles
+@import './base/common';
+@import './base/resets';
+@import './base/inherit';
+
+// Components styles
+@import './components/container';
+@import './components/nav';
+@import './components/button';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/warning';
+
+// Layout styles
+@import './layout/header';
+@import './layout/hero';
+@import './layout/offerings';
+@import './layout/favorites';
+@import './layout/customers';
+@import './layout/subscribe';
+@import './layout/form';
+@import './layout/footer';

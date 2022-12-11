@@ -1,0 +1,49 @@
+<section class="subscribe">
+  <div class="container subscribe__container">
+    <picture class="subscribe__img" id="subscribe">
+      <source
+        srcset="
+          ./images/png/banana-pc@1x-546.png  1x,
+          ./images/png/banana-pc@2x-1092.png 2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/png/banana-tablet@1x-281.png 1x,
+          ./images/png/banana-tablet@2x-562.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/png/banana-mobile@1x-161.png 1x,
+          ./images/png/banana-mobile@2x-322.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img src="./images/png/banana-mobile@2x-322.png" alt="banana" />
+    </picture>
+    <h2 class="subscribe__title">Subscribe To Get Special Offers</h2>
+    <p class="subscribe__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+    <form class="subscribe__form validateSub">
+      <label class="subscribe__label">
+        <input
+          data-email
+          class="subscribe__input subsInput"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+        />
+      </label>
+      <button class="btn btn--subscribe submitBtn" type="submit">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>

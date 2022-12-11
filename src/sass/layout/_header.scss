@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: var(--bg-color);
+  width: 100%;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+
+  &__container {
+    position: relative;
+    @include flexbox(flex, center, space-between, row);
+  }
+
+  &__logo {
+    @media screen and (min-width: 768px) {
+      margin-right: auto;
+    }
+  }
+
+  &__btn {
+    display: none;
+    padding: 6px 17px;
+    @include font(14px, 400, 21px);
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  padding: 22px 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    fill: var(--border-color);
+  }
+
+  &:hover .menu__icon,
+  &:focus .menu__icon,
+  &:active .menu__icon {
+    fill: var(--subscribe-color);
+  }
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

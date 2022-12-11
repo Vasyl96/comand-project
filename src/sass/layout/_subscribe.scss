@@ -1,0 +1,113 @@
+.subscribe {
+  padding-top: 52px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 82px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 0;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+
+    @media screen and (max-width: 767px) {
+      top: -95px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    @media screen and (min-width: 768px) {
+      top: -155px;
+      right: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -65px;
+      right: 0;
+    }
+  }
+
+  &__title {
+    @include font(28px, 700, 34px);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      @include font(42px, 700, 50px);
+    }
+
+    &--footer {
+      @include font(14px, 500, 21px);
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    @include font(14px, 400, 16px);
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 24px;
+      @include font(16px, 400, 24px);
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-width: 656px;
+    }
+  }
+
+  &__form {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: 22px;
+    }
+
+    @media screen and(min-width: 1280px) {
+      margin-right: 32px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    // height: 42px;
+    border: 1px solid var(--subscribe-color);
+    outline: transparent;
+    border-radius: 30px;
+    padding: 11px 12px;
+    @include font(12px, 400, 18px);
+
+    @media screen and (min-width: 768px) {
+      min-width: 395px;
+    }
+
+    &:not(:placeholder-shown):required:valid {
+      border-color: var(--border-color);
+    }
+
+    &:not(:placeholder-shown):required:invalid {
+      border-color: var(--warning-color);
+    }
+
+    &:not(:placeholder-shown):required:invalid + .warning--subscribe {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+
+  transform: translate(-50%, -50%);
+
+  min-width: 310px;
+
+  padding: 40px;
+
+  background: var(--bg-color);
+
+  background-image: url(../images/svg/bg/bg-pc-top.svg);
+  background-position: 0 360;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.4);
+  border-radius: 30px 0px 30px 30px;
+
+  transition: transform var(--animation-global),
+    visibility var(--animation-global), opacity var(--animation-global);
+
+  @media screen and (max-width: 479px) {
+    padding: 22px;
+  }
+
+  @media screen and (min-width: 480px) {
+    min-width: 470px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 530px;
+  }
+
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+
+  background-color: transparent;
+  border: none;
+
+  transition: fill var(--animation-global);
+
+  cursor: pointer;
+  user-select: none;
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--subscribe-color);
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  background-color: var(--error-color);
+  color: var(--bg-color);
+  text-transform: none;
+  transform: translate(-50%, 75%);
+  padding: 2px; /* Поля вокруг текста */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--animation-global) 2268ms;
+}
+@media screen and (min-width: 1280px) {
+  [data-tooltip]:hover::after {
+    opacity: 1;
+  }
+}

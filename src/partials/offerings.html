@@ -1,0 +1,86 @@
+<section class="offerings" id="offerings">
+  <div class="offerings__content container">
+    <picture>
+      <source
+        srcset="
+          ./images/png/apple-pc@1x-550.png  1x,
+          ./images/png/apple-pc@2x-1100.png 2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/png/apple-tablet@1x-704.png  1x,
+          ./images/png/apple-tablet@2x-1408.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/png/apple-mobile@1x-280.png 1x,
+          ./images/png/apple-mobile@2x-560.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img
+        class="offerings__pic"
+        src="./images/png/apple-mobile@2x-560.png"
+        alt="apple"
+      />
+    </picture>
+    <div class="offerings__field">
+      <h2 class="offerings__title">What’s Special About Our Offerings</h2>
+      <p class="offerings__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <ul class="offerings__list">
+        <li class="offerings__item offerings__rocket">
+          <h3 class="offerings__slogan">Fastest Delivery</h3>
+          <p class="offerings__subject">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+        <li class="offerings__item offerings__touch">
+          <h3 class="offerings__slogan">Easy to order</h3>
+          <p class="offerings__subject">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+      </ul>
+      <div class="offerings__options">
+        <button type="button" class="offerings__button" data-modal-open>
+          Order Now
+        </button>
+        <input class="read-input" type="checkbox" id="checkbox" />
+        <label class="read-label" for="checkbox">
+          Read
+          <span class="read-more"> &nbsp;more </span>
+          <span class="read-less"> &nbsp;less </span>
+          <svg class="read__icon">
+            <use
+              class="read-more__icon"
+              href="./images/svg/icons.svg#more"
+            ></use>
+            <use
+              class="read-less__icon"
+              href="./images/svg/icons.svg#less"
+            ></use>
+          </svg>
+        </label>
+
+        <p class="offerings__description hidden-text">
+          Lorem, ipsum please sit amet consectetur adipisicing elit. Cupiditate
+          at assumenda inventore velit nihil insert, ea amet corrupti, veritatis
+          nulla, aperiam reiciendis bread tempora natus magni minima neque
+          nostrum eligendi aut beatae. In velit numquam dolor sit amet, elit.
+          Your suscipit maxime quisquam odit animi cupiditate blanditiis. Disc
+          provident tenetur ratione drive sit amet consectetur!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

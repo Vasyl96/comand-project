@@ -1,0 +1,20 @@
+:root {
+  // Змінні шрифтів
+  --main-font: 'Roboto', sans-serif;
+
+  // Змінні кольорів
+  --main-color: #2c2c2c;
+  --secondary-color: #000000;
+  --button-color: #bbf330;
+  --button-hover-color: #b5ff00;
+  --subscribe-color: #ffe550;
+  --border-color: #7eb101;
+  --border-hover-color: #597d00;
+  --warning-color: #ff705d;
+  --error-color: #fe6060;
+  --bg-color: #fefefe;
+  --form-color: #505050;
+
+  // Змінна анімації переходів
+  --animation-global: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

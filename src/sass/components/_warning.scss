@@ -1,0 +1,24 @@
+.warning {
+  @include font(10px, 400, 15px);
+  opacity: 0;
+  position: absolute;
+  bottom: -14px;
+  right: 0;
+  display: inline-flex;
+  gap: 4px;
+  color: var(--warning-color);
+  transition: opacity var(--animation-global);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-image: url(../images/svg/frame.svg);
+    background-size: cover;
+  }
+
+  &-input {
+    border-color: var(--warning-color);
+  }
+}

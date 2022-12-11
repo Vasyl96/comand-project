@@ -1,0 +1,116 @@
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  background-image: url(../images/svg/bg/bg-mobile-bottom.svg);
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 120px;
+    background-image: url(../images/svg/bg/bg-tablet-bottom.svg);
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-image: url(../images/svg/bg/bg-pc-bottom.svg);
+  }
+
+  @media screen and (min-width: 1920px) {
+    background-size: 1920px;
+    background-position: center bottom;
+  }
+
+  &__title {
+    @include font(28px, 700, 33px);
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      @include font(42px, null, 49px);
+    }
+  }
+
+  &__paragraph {
+    @include font(14px, 400, 16px);
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+      @include font(16px, null, 19px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 768px) {
+      gap: 32px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      gap: 139px;
+    }
+  }
+
+  &__item {
+    background: var(--bg-color);
+    border-radius: 0px 30px 30px 30px;
+    padding: 8px;
+
+    @media screen and (min-width: 768px) {
+      padding: 12px;
+      max-width: 336px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding: 14px;
+      max-width: 501px;
+    }
+  }
+
+  &__icons {
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    @include font(16px, 700, 19px);
+
+    @media screen and (min-width: 768px) {
+      @include font(18px, null, 21px);
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    max-width: 160px;
+    padding: 2px 0;
+    border-right: 1px solid var(--border-color);
+  }
+
+  &__img {
+    margin-right: 16px;
+  }
+
+  &__name {
+    @include font(14px, 500, 21px);
+  }
+
+  &__description {
+    @include font(14px, 400, 21px);
+  }
+
+  &__container::before {
+    display: block;
+    content: '';
+    height: 100px;
+    margin: -100px 0 0;
+  }
+}

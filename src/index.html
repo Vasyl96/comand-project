@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <meta name="description" content="SCP-2268, GoIT Students Team Project" />
+    <title>FoodSta</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./images/svg/favicon.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
+
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <include src="./partials/header.html"></include>
+    <main>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/offerings.html"></include>
+      <include src="./partials/favorites.html"></include>
+      <include src="./partials/customers.html"></include>
+      <include src="./partials/subscribe.html"></include>
+    </main>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/backdrop.html"></include>
+    <include src="./partials/modal.html"></include>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

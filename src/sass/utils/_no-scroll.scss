@@ -1,0 +1,17 @@
+.no-scroll {
+  /* Отключение скроллбара */
+  overflow-y: hidden;
+
+  @media screen and (min-width: 1280px) {
+    /* Зарезервированное место под скроллбар, предотвращающее смещение элементов страницы */
+    padding-right: 16px;
+  }
+}
+
+.is-open {
+  @media screen and (min-width: 768px) {
+    // Отмена запрета скролла при повороте экрана при открытом модальном меню
+    overflow-y: scroll;
+    padding-right: 0px;
+  }
+}
